@@ -196,7 +196,9 @@ local permagbot2 = [[
 🔒#muteslist : 
 〰〰〰〰〰
 💬نمايش کاربران خفه شده 
-🔒#mutelist : 
+🔒#mutelist :
+
+@vahidupvc 
 
 ]]
 local permagbot3 = [[
@@ -249,6 +251,8 @@ local permagbot3 = [[
 ❔تبدیل متن به صدا ، کافیست جای متن ، متن انگلیسی بزنید
 
 ➰بجای کلمه یا متن موارد دلخواه خود را بنویسید.
+
+@vahidupvc
 ]]
 
 local permagbot7 = [[
@@ -273,7 +277,7 @@ ________________
 #muteslist
 #banlist
 قفل تگ و فوروارد در لیست ها نیستند دستی چک کنید
-...
+@vahidupvc
 ]]
 
 local permagbot8 = [[
@@ -311,7 +315,18 @@ ________________________
 mesal : pattern azan
 
 
-...
+@vahidupvc
+]]
+
+
+local permagbot9 = [[
+
+💬رهنمای ارتباط با مدیران جهت سفارش ربات
+=========================
+جهت سفارش ربات با یکی از آیدی های زیر هماهنگ کنید
+
+✏️ @vahidupvc
+✏️ @Hani90_rfff
 ]]
     if matches[1] == 'مدیریت' and is_momod(msg) then
         return permagbot  
@@ -323,6 +338,8 @@ mesal : pattern azan
 		return permagbot7
   elseif matches[1] == 'پلاگین' and is_momod(msg) then
 		return permagbot8
+  elseif matches[1] == 'سفارش ربات' and is_momod(msg) then
+		return permagbot9
   end
 end
 
@@ -336,6 +353,7 @@ return {
     '^[!#/](فان)$',
     '^[!#/](help)$',
     '^[!#/](راهنما)$',
+	'^[!#/](سفارش ربات)$',
       },
       run = run,
 }
